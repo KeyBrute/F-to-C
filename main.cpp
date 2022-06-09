@@ -7,7 +7,6 @@ using namespace std;
 int main()
 {
     int inputC;
-
     cout << "Enter a value (Celsius to Fahrenheit): ";
     cin >> inputC;
     cout << "Celsius" << setw(15) << "Fahrenheit"
@@ -22,7 +21,6 @@ int main()
     }
 
     int inputF;
-
     cout << "Enter a value (Fahrenheit to Celsius): ";
     cin >> inputF;
     cout << "Fahrenheit" << setw(15) << "Celsius"

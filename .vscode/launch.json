@@ -7,9 +7,9 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": "c:/Users/micke/F to C",
-      "program": "c:/Users/micke/F to C/build/Debug/outDebug",
+      "externalConsole": true,
+      "cwd": "c:/Users/micke/F to C/exam",
+      "program": "c:/Users/micke/F to C/exam/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -89,6 +89,23 @@ that takes count of numbers in the series as parameter and calculates the sum of
 Output should be:
 6*/
 
+int calculateSum(int scoreVals[], int &numVals)
+{
+
+    int i;
+
+    int returnVal = 0;
+    for (i = 0; i < numVals; i++)
+    {
+        if (scoreVals[i] % 2 == 0)
+        {
+            returnVal += scoreVals[i];
+        }
+    }
+
+    return returnVal;
+}
+
 void problem2()
 {
 
@@ -96,7 +113,29 @@ void problem2()
     // write code here to read the number of elements that the user would like to enter.
     // calculateSum();/*Implement this function above problem2() and call it within problem 2 to recieve full credit,
     // you should figure out parameters and include them and also check for return types.*/
+    int NUM_SCORES;
 
+    cout << "Enter number of elements you want to enter: ";
+    cin >> NUM_SCORES;
+    int quizScores[NUM_SCORES];
+    int i;
+    int result;
+    int returnBigScore;
+    int returnSmallScore;
+    int returnVal;
+    int smallVal;
+    int x;
+    cout << endl;
+    cout << "Enter values: ";
+
+    for (i = 0; i < NUM_SCORES; ++i)
+    {
+        cin >> quizScores[i];
+    }
+    // cout << calculateRange(returnVal);
+
+    returnBigScore = calculateSum(quizScores, NUM_SCORES);
+    cout << "The sum of the even numbers is: " << returnBigScore << endl;
 } // end problem2()
 
 // -----------------------------------------------------------------------------------------------------

@@ -31,6 +31,5 @@ int main()
         cout
             << res[i] << " ";
 
-    // cout << "The running sum is: " << res.back() << endl;
     return 0;
 }

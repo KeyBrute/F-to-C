@@ -1,33 +1,48 @@
+
 #include <iostream>
 using namespace std;
 
+class Person
+{
+public:
+    void SetFirstName(string firstNameToSet);
+    void SetLastName(string lastNameToSet);
+    string GetFullName() const;
+
+private:
+    string first;
+    string last;
+};
+
+void Person::SetFirstName(string firstNameToSet)
+{
+    first = firstNameToSet;
+}
+
+void Person::SetLastName(string lastNameToSet)
+{
+    last = lastNameToSet;
+}
+
+string Person::GetFullName() const
+{
+    return first + "_" + last;
+}
+
 int main()
 {
-    //  const int NUM_ELEMENTS = 3;
-    // int userVals[NUM_ELEMENTS];
-    // int i;
+    string firstName;
+    string lastName;
 
-    // userVals[0] = -2;
-    // userVals[1] = 3;
-    // userVals[2] = -6;
-    // userVals[3] = 8;
-    int i;
-    int s;
-    int N_SIZE = 3;
+    firstName = "Sam";
+    lastName = "Wayne";
 
-    int v[N_SIZE];
-    v[0] = 77;
-    v[1] = -1;
+    Person person1;
 
-    v[3] = 3;
-    s = v[0];
+    person1.SetFirstName(firstName);
+    person1.SetLastName(lastName);
 
-    for (i = 0; i < N_SIZE; ++i)
-    {
-        if (s > v[i])
-        {
-            s = v[i];
-        }
-    }
-    cout << s;
+    cout << person1.GetFullName();
+
+    return 0;
 }

@@ -1,34 +1,7 @@
- // char a = cmd.at(0);
-    // char col = cmd.at(1);
-    // char row = cmd.at(2);
-    // int firstNum = 0;
-    // firstNum = col - 48;
-    // int secondNum = 0;
-    // secondNum = row - 48;
-
-    // if (a == 'f')
-    // {
-    //     if (getCell(firstNum, secondNum) == UNKNOWN)
-    //     {
-    //         setCell(firstNum, secondNum, INCORRECT_FLAGGED_MINE);
-    //         num_incorrect_flagged_mine++;
-    //     }
-
-    //     else if (getCell(firstNum, secondNum) == UNFLAGGED_MINE)
-    //     {
-    //         setCell(firstNum, secondNum, FLAGGED_MINE);
-    //         num_correct_flagged_mine++;
-    //     }
-    // }
-    // if (a == 'r')
-    // {
-    //     reveal(firstNum, secondNum);
-    // }
-    // if (a == 'u')
-    // {
-    //     if (getCell(firstNum, secondNum) == INCORRECT_FLAGGED_MINE)
-    //     {
-    //         setCell(firstNum, secondNum, UNKNOWN);
-    //         num_incorrect_flagged_mine--;
-    //     }
-    // }
+const string rule_msg_1 = "The selected password must be at least eight characters long.";
+// const string rule_msg_2 = "The selected password must have at least one uppercase letter.";
+// const string rule_msg_3 = "The selected password must have at least one lowercase letter.";
+// const string rule_msg_4 = "The selected password must have at least one digit.";
+// const string rule_msg_5 = "The selected password must have at least one of special characters: [@,!,#,^,&,*,$]";
+// const string rule_msg_6 = "The selected password has been leaked.";
+// const string rule_msg_7 = "The selected password cannot contain a dictionary word.";

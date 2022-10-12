@@ -9,15 +9,15 @@ using namespace std;
 // function definition
 double calculatePercentages(string string1)
 {
-    double n = string1.length();
-    double h = 0, t = 0;
+    double x = string1.length();
+    double y = 0, z = 0;
 
-    for (double i = 0; i < n; i++)
+    for (double i = 0; i < x; i++)
     {
         if (string1[i] == 'H')
-            h++;
+            y++;
     }
-    double hPerc = h * 100 / n;
+    double hPerc = y * 100 / x;
     double tPerc = 100 - hPerc;
     cout << "Heads percentage is: " << fixed << setprecision(2) << hPerc << " and Tails percentage is: " << fixed << setprecision(2) << tPerc << endl;
     return hPerc;

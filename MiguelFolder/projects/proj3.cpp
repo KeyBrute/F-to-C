@@ -20,7 +20,7 @@ const string rule_msg_3 = "The selected password must have at least one lowercas
 const string rule_msg_4 = "The selected password must have at least one digit.";
 const string rule_msg_5 = "The selected password must have at least one of special characters: [@,!,#,^,&,*,$]";
 const string rule_msg_6 = "The selected password has been leaked.";
-const string rule_msg_7 = "The selected password cannot contain a dictionary word.";
+const string rule_msg_7 = "The selected password cannot contain a dictionary word..";
 
 /****
  * Runs the main part of the program

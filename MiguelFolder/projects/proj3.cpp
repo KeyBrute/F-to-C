@@ -11,6 +11,7 @@
 #include <iostream> // for cin and cout
 #include <string>
 #include <fstream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -40,8 +41,12 @@ int run(string leaked_password_file, string english_word_file)
     while (file >> word)
     {
         // displaying content
-        cout << word << endl;
+        if (word.length() <= 8)
+        {
+            cout << word << endl;
+        }
     }
+    return 0;
 };
 
 int main()

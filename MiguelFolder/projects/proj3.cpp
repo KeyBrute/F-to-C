@@ -30,6 +30,25 @@ const string rule_msg_7 = "The selected password cannot contain a dictionary wor
  ****/
 int run(string leaked_password_file, string english_word_file)
 {
+    // cout << "Enter password: ";
+    // string userName = "";
+    // cin >> userName;
+    // // int counts[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    // // int total = 0;
+    // if (userName.length() < 8)
+    // {
+    //     cout << "The selected password must be at least eight characters long" << endl;
+    //     // for (int i = 0; i < userName.length(); i++)
+    //     // {
+    //     //     if (isdigit(userName[i], log))
+    //     //     {
+    //     //         int idx = (int)userName[i];
+    //     //         counts[idx]++;
+    //     //         total++;
+    //     //     }
+    //     //     cout << "The selected password must have at least one digit. " << endl;
+    //     // }
+    // }
     fstream file;
     string word, t, q, filename;
 
@@ -56,28 +75,9 @@ int main()
     /** Change the address of the files appropriatly based on your local machine.
      * This main function will be replaced during testing. Do not add any line of code to the main function
      **/
-    cout << "Enter password: ";
-    string userName = "";
-    cin >> userName;
-    // int counts[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    // int total = 0;
-    if (userName.length() < 8)
-    {
-        cout << "The selected password must be at least eight characters long" << endl;
-        // for (int i = 0; i < userName.length(); i++)
-        // {
-        //     if (isdigit(userName[i], log))
-        //     {
-        //         int idx = (int)userName[i];
-        //         counts[idx]++;
-        //         total++;
-        //     }
-        //     cout << "The selected password must have at least one digit. " << endl;
-        // }
-    }
 
     string leaked_password_file = "password leak.txt"; // change this based on the location of the file on your machine
     string english_word_file = "words_5.txt";          // change this based on the location of the file on your machine
-                                                       // run(leaked_password_file, english_word_file);
+    run(leaked_password_file, english_word_file);
     return 0;
 }

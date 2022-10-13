@@ -2,47 +2,72 @@
 #include <iostream>
 using namespace std;
 
-class Person
+class Dog
 {
 public:
-    void SetFirstName(string firstNameToSet);
-    void SetLastName(string lastNameToSet);
-    string GetFullName() const;
+    void SetWeightAndAge(int weightToSet, int ageToSet);
+    int GetHumanYears() const;
 
 private:
-    string first;
-    string last;
+    int years;
+    int weight;
+    string size;
+    int humanYears;
+    void SetHumanYears();
 };
 
-void Person::SetFirstName(string firstNameToSet)
+void Dog::SetWeightAndAge(int weightToSet, int yearsToSet)
 {
-    first = firstNameToSet;
+    weight = weightToSet;
+
+    if (weight <= 15)
+    {
+        size = "small";
+    }
+    else if (weight <= 45)
+    {
+        size = "medium";
+    }
+    else
+    {
+        size = "large";
+    }
+
+    years = yearsToSet;
+    SetHumanYears();
 }
 
-void Person::SetLastName(string lastNameToSet)
+void Dog::SetHumanYears()
 {
-    last = lastNameToSet;
+    int factor;
+
+    if (size == "small")
+    {
+        factor = 6;
+    }
+    else if (size == "medium")
+    {
+        factor = 7;
+    }
+    else
+    {
+        factor = 8;
+    }
+
+    humanYears = years * factor;
 }
 
-string Person::GetFullName() const
+int Dog::GetHumanYears() const
 {
-    return first + "_" + last;
+    return humanYears;
 }
 
 int main()
 {
-    string firstName;
-    string lastName;
+    Dog buddy;
 
-    firstName = "Sam";
-    lastName = "Wayne";
+    buddy.SetWeightAndAge(23, 1);
 
-    Person person1;
-
-    person1.SetFirstName(firstName);
-    person1.SetLastName(lastName);
-
-    cout << person1.GetFullName();
-
+    cout << "Human years: " << buddy.GetHumanYears();
     return 0;
 }

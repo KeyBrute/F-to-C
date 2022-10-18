@@ -1,73 +1,36 @@
-
 #include <iostream>
+#include <vector>
+#include "Product.h"
 using namespace std;
-
-class Dog
-{
-public:
-    void SetWeightAndAge(int weightToSet, int ageToSet);
-    int GetHumanYears() const;
-
-private:
-    int years;
-    int weight;
-    string size;
-    int humanYears;
-    void SetHumanYears();
-};
-
-void Dog::SetWeightAndAge(int weightToSet, int yearsToSet)
-{
-    weight = weightToSet;
-
-    if (weight <= 15)
-    {
-        size = "small";
-    }
-    else if (weight <= 45)
-    {
-        size = "medium";
-    }
-    else
-    {
-        size = "large";
-    }
-
-    years = yearsToSet;
-    SetHumanYears();
-}
-
-void Dog::SetHumanYears()
-{
-    int factor;
-
-    if (size == "small")
-    {
-        factor = 6;
-    }
-    else if (size == "medium")
-    {
-        factor = 7;
-    }
-    else
-    {
-        factor = 8;
-    }
-
-    humanYears = years * factor;
-}
-
-int Dog::GetHumanYears() const
-{
-    return humanYears;
-}
 
 int main()
 {
-    Dog buddy;
+    vector<Product> productList;
+    Product currProduct;
+    int currPrice;
+    string currName;
+    unsigned int i;
+    Product resultProduct;
 
-    buddy.SetWeightAndAge(23, 1);
+    cin >> currPrice;
+    while (currPrice > 0)
+    {
+        cin >> currName;
+        currProduct.SetPriceAndName(currPrice, currName);
+        productList.push_back(currProduct);
+        cin >> currPrice;
+    }
 
-    cout << "Human years: " << buddy.GetHumanYears();
+    resultProduct = productList.at(0);
+    for (i = 0; i < productList.size(); ++i)
+    {
+        if (productList.at(i).GetPrice() < resultProduct.GetPrice())
+        {
+            resultProduct = productList.at(i);
+        }
+    }
+
+    cout << "$" << resultProduct.GetPrice() << " " << resultProduct.GetName() << endl;
+
     return 0;
 }

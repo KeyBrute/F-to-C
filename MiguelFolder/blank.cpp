@@ -1,36 +1,20 @@
 #include <iostream>
-#include <vector>
-#include "Product.h"
+#include <cmath>
+#include <iomanip>
+#include <bits/stdc++.h>
+#include <cstdio>
+#include <string.h>
+#include <cstring>
 using namespace std;
 
+int a = 4, b = 8, c = 10; // global
+void confuse1(int &b, int c)
+{
+   b = ++b + c++;
+}
 int main()
 {
-    vector<Product> productList;
-    Product currProduct;
-    int currPrice;
-    string currName;
-    unsigned int i;
-    Product resultProduct;
-
-    cin >> currPrice;
-    while (currPrice > 0)
-    {
-        cin >> currName;
-        currProduct.SetPriceAndName(currPrice, currName);
-        productList.push_back(currProduct);
-        cin >> currPrice;
-    }
-
-    resultProduct = productList.at(0);
-    for (i = 0; i < productList.size(); ++i)
-    {
-        if (productList.at(i).GetPrice() < resultProduct.GetPrice())
-        {
-            resultProduct = productList.at(i);
-        }
-    }
-
-    cout << "$" << resultProduct.GetPrice() << " " << resultProduct.GetName() << endl;
-
-    return 0;
+   int b = 2, c = 5;
+   confuse1(a, b);
+   cout << a + b + c;
 }

@@ -1,5 +1,1 @@
-
-    for (i = 0; i < NUM_SCORES; ++i)
-    {
-        cin >> quizScores[i];
-    }
+#include <bits/stdc++.h>

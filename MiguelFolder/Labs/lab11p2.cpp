@@ -76,9 +76,7 @@ int main()
     cout << "Please input the new students first name, last name, age, credit hours and UIN, separated by a space" << endl;
     int age, credits, UIN;
     string firstname, lastname;
-    Person me;
-    me.display();
-    cout << endl;
+
     cin >> firstname >> lastname >> age >> credits >> UIN;
     Person me2;
 
@@ -89,5 +87,10 @@ int main()
     me2.setCredits(credits);
 
     me2.display();
+    Person meCopy(me2);
+    meCopy.setName(firstname + "_clone");
+    meCopy.setUIN(UIN + 1);
+
+    meCopy.display();
     return 0;
 }

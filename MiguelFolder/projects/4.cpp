@@ -19,6 +19,7 @@ using namespace std;
 /*********************************************** Helper functions ***************************************/
 
 //The splitString function takes a line and split it on the delimiter and push the parts into items
+
 struct titleRecord {
    string titleId;
    string primaryTitle;
@@ -119,7 +120,7 @@ void principalsStore(string principalsFile, vector<principalRecord>&principals){
 
 }
 
-void searchMovies(){
+void searchMovies(string titlesFile){
 string userSearch;
 cout <<"Enter search phrase: ";
 cin >> userSearch;
@@ -127,6 +128,15 @@ vector<string>userVector;
 string m = userSearch;
 char w = '+';
 splitString(userSearch,w,userVector);
+vector<titleRecord>names;
+
+titleStore(titlesFile,names);
+for(int i =  0; i < names.size(); i++){
+cout << i << ":" << endl;
+cout << 	
+
+}
+
 }
 
 void searchActors(){

@@ -63,7 +63,7 @@ int findMedian(Node *pHead)
     Node *current = pHead;
     int num = 0;
     // we traverse the list if it is not empty
-    while (num != NULL)
+    while (current != NULL)
     {
         num++;
         // move to the next node
@@ -99,6 +99,7 @@ int findMedian(Node *pHead)
 
 int main()
 {
+
     int userInput;
     Node *pHead = NULL; // pointer to the head of the list
 
@@ -111,15 +112,19 @@ int main()
     while (userInput != -1)
     {
         // Store this number on the list
+
         append(pHead, userInput);
         cin >> userInput;
     }
 
     // Call the function and display the list before and after
     cout << "The list is: " << endl;
+
     display(pHead);
+
     findMedian(pHead);
-    int medianVal = findMedian(pHead);
+        int medianVal = findMedian(pHead);
+
     cout << "The median of the list is : " << medianVal << endl;
     return 0;
 

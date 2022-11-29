@@ -57,7 +57,7 @@ void append(Node *&pHead, int userInput)
 //------------------------------------------------------------------------
 
 // The function you have to complete would be here:
-int findMedian(Node *&pHead)
+int findMedian(Node *pHead)
 {
     //...
     Node *current = pHead;
@@ -89,6 +89,7 @@ int findMedian(Node *&pHead)
             pHead = pHead->pNext;
         }
     }
+
     return val;
 }
 
@@ -118,8 +119,8 @@ int main()
     cout << "The list is: " << endl;
     display(pHead);
     findMedian(pHead);
-    display(pHead);
-
+    int medianVal = findMedian(pHead);
+    cout << "The median of the list is : " << medianVal << endl;
     return 0;
 
 } // end main()

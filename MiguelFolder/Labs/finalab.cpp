@@ -51,7 +51,7 @@ pLast->pNext = pTemp;
 
 
 // The function you have to complete would be here:
-void someFunctionToDo(Node* &pHead) {
+void accumulateSum(Node* &pHead) {
 //...
 Node * temp=pHead;
 int sum=0;
@@ -98,7 +98,7 @@ cin >> userInput;
 // Call the function and display the list before and after
 cout << "The list is: " << endl;
 display(pHead);
-someFunctionToDo(pHead);
+accumulateSum(pHead);
 display(pHead);
 
 return 0;
